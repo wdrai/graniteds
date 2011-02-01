@@ -1978,7 +1978,7 @@ package org.granite.tide {
 	            }
     	        else if (_exceptionHandlers.length > 0 && faultEvent.message is ErrorMessage) {
     	        	// Handle fault with default exception handler
-        	        _exceptionHandlers[0].handler(context, faultEvent.message as ErrorMessage);
+        	        _exceptionHandlers[0].handle(context, faultEvent.message as ErrorMessage);
             	}
 	            else {
     	            log.error("Unknown fault: " + faultEvent.toString());
